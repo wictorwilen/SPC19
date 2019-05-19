@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "full-page-apps-sp-fx-client-side-solution",
+    "id": "9c915f0d-5015-497b-8a5a-0bd330c91be1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/full-page-apps-sp-fx.sppkg"
+  }
+}

@@ -1,0 +1,50 @@
+.launch {
+  @import "~office-ui-fabric-core/dist/sass/_References.scss";
+  flex: 1;
+  margin: 1em;
+  //max-height: 400px;
+
+  .heading {
+    font-size: $ms-font-size-24;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .subHeading {
+    font-size: $ms-font-size-20;
+    font-weight: $ms-font-weight-semibold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .description {
+    font-size: $ms-font-size-10;
+    max-height: 80px;
+    overflow: hidden;
+  }
+
+  .helpful {
+    font-size: $ms-font-size-10;
+    font-weight: $ms-font-weight-semibold;
+  }
+
+  .patch {
+    margin: '0px -13px';
+  }
+
+
+  .stack {
+    width: 100%;
+  }
+
+}
+.compact {
+  max-height: 212px;
+}
+
+.narrow {
+  max-width: 212px;
+}
+

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "full-page-app-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/fullPageApp/FullPageAppWebPart.js",
+          "manifest": "./src/webparts/fullPageApp/FullPageAppWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FullPageAppWebPartStrings": "lib/webparts/fullPageApp/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}
