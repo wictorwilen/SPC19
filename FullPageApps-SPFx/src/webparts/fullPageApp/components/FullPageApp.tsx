@@ -23,12 +23,17 @@ export default class FullPageApp extends React.Component<IFullPageAppProps, IFul
   }
 
   public componentDidMount() {
+    // Add event listener for infinite scroll
     if (this.props.formFactor == FormFactor.FullPageWebPart && this.props.infiniteScroll) {
       window.addEventListener('scroll', this.onScroll, false);
     }
+
+    // load the data
     this.loadData(this.props);
   }
+
   public componentWillUnmount() {
+    // remove event listener for the infinite scroll
     if (this.props.formFactor == FormFactor.FullPageWebPart && this.props.infiniteScroll) {
       window.removeEventListener('scroll', this.onScroll, false);
     }
@@ -83,7 +88,6 @@ export default class FullPageApp extends React.Component<IFullPageAppProps, IFul
           loading: false
         });
       }
-
     }));
   }
 

@@ -57,7 +57,8 @@ export class LaunchCard extends React.Component<ILaunchProps, {}> {
                 <Image src={this.props.links.mission_patch} imageFit={ImageFit.centerCover} height={imgWidth} alt="Mission Patch" />
               }
               {this.props.links.flickr_images.map((flimg, idx) => {
-                return <Image src={flimg} imageFit={ImageFit.centerCover} height={imgWidth} key={`flimg-${idx}`} />;
+                let img = flimg.replace("_o.jpg", "_z.jpg"); // use a smaller Flickr image format: https://www.flickr.com/services/api/misc.urls.html
+                return <Image src={img} imageFit={ImageFit.centerCover} height={imgWidth} key={`flimg-${idx}`} />;
               })}
             </Slider>
           }

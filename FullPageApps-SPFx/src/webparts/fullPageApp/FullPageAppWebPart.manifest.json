@@ -19,8 +19,8 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
     "title": { "default": "Full Page App" },
-    "description": { "default": "Full Page App description" },
-    "officeFabricIconFontName": "Page",
+    "description": { "default": "SPC 19 Full Page app demo web part" },
+    "officeFabricIconFontName": "Rocket",
     "properties": {
       "count": 16,
       "tbd": "all",

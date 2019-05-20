@@ -81,12 +81,16 @@ export default class FullPageAppWebPart extends BaseClientSideWebPart<IFullPageA
   }
   
   public render(): void {
+    // render some place holders. 1) for the full page component, 2) for the diagnostics component
     if (!this.renderedOnce) {
       this.domElement.innerHTML = `<div></div><div></div>`;
       this.domElementMain = this.domElement.childNodes.item(0) as HTMLElement;
       this.domElementDiag = this.domElement.childNodes.item(1) as HTMLElement;
     }
+    // get the form factor
     const formFactor = this.getHost();
+
+    // Create our React component
     const element: React.ReactElement<IFullPageAppProps> = React.createElement(
       FullPageApp,
       {
@@ -110,6 +114,7 @@ export default class FullPageAppWebPart extends BaseClientSideWebPart<IFullPageA
     console.log(this.context);
 
 
+    // if diagnostics is turned on, add the diagnostics react component
     if (this.properties.diagnostics) {
       const diagElement: React.ReactElement<IDiagnosticsProps> = React.createElement(
         Diagnostics,
