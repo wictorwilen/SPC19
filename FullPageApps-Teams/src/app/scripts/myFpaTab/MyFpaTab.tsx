@@ -71,8 +71,12 @@ export class MyFpaTab extends TeamsBaseComponent<IMyFpaTabProps, IMyFpaTabState>
             });
         } else {
             this.setState({
-                entityId: "This is not hosted in Microsoft Teams"
+                count: parseInt(this.getParameterByName("count") || "16", 10),
+                tbd: this.getParameterByName("tbd") || "all",
+                success: this.getParameterByName("success") || "all",
+                model: this.getParameterByName("model") || "all",
             });
+            this.loadData();
         }
     }
 
@@ -157,7 +161,7 @@ export class MyFpaTab extends TeamsBaseComponent<IMyFpaTabProps, IMyFpaTabState>
         }));
     }
 
-    private getParameterByName(name: string, url: string): string | undefined {
+    private getParameterByName(name: string, url?: string): string | undefined {
         if (!url) { url = window.location.href; }
         name = name.replace(/[\[\]]/g, "\\$&");
         const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
